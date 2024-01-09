@@ -14,11 +14,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $user =  new App\Models\User;
-        $user->name = "testing";
-        $user->email = "admin@gmail.com";
-        $user->password = \Hash::make("admin");
-        $user->save();
-        $this->command->info("user Berhasil Dibuat");
+        $employee =  new App\Models\Employee;
+        $employee->tanggal = "Kamis, 05 Januari 2024";
+        $employee->nama = "Abi";
+        $employee->telp = "0982881";
+        $employee->kota = "Malang";
+        $employee->prov = "Jawa Timur";
+        $employee->sumber = "Facebook";
+        $employee->iklan = "Iklan paket usaha distro terbaru";
+        $employee->jam = "14.10";
+        $employee->save();
+        $this->command->info("employee Berhasil Dibuat");
     }
 }

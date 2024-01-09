@@ -18,3 +18,5 @@ Route::get('/', function () {
 });
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/welcome', [AuthController::class, 'login'])->name('login');
+// Route::post('/welcome', [AuthController::class, 'show'])->name('show');
+Route::get('/employee/chart', [AuthController::class, 'chart']);
