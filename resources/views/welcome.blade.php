@@ -375,6 +375,8 @@
                                         <th>Alamat</th>
                                         <th>No Telpn</th>
                                         <th>Tanggal</th>
+                                        
+                                        {{-- used to display all data --}}
                                         {{-- <th>ID</th>
                                         <th>Tanggal</th>
                                         <th>Nama</th>
@@ -396,7 +398,8 @@
                                         <td>{{ $employees->telp }}</td>
                                         <td>{{ $employees->tanggal }}</td>
 
-                                        {{-- <td>{{ $employees->id }}</td>
+                                        {{-- used to display all data --}}
+                                        {{-- <td>{{ $index + 1 }}</td>
                                         <td>{{ $employees->tanggal }}</td>
                                         <td>{{ $employees->nama }}</td>
                                         <td>{{ $employees->telp }}</td>
