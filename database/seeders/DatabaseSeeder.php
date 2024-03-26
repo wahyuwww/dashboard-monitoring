@@ -2,7 +2,8 @@
 
 
 use Illuminate\Database\Seeder;
-
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 
 class DatabaseSeeder extends Seeder
@@ -14,16 +15,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $employee =  new App\Models\Employee;
-        $employee->tanggal = "Kamis, 05 Januari 2024";
-        $employee->nama = "Abi";
-        $employee->telp = "0982881";
-        $employee->kota = "Malang";
-        $employee->prov = "Jawa Timur";
-        $employee->sumber = "Facebook";
-        $employee->iklan = "Iklan paket usaha distro terbaru";
-        $employee->jam = "14.10";
-        $employee->save();
-        $this->command->info("employee Berhasil Dibuat");
+        DB::table('users')->insert([
+            'name' => 'name',
+            'email' => 'name@example.com',
+            'password' => Hash::make('password'),
+        ]);
     }
 }

@@ -14,7 +14,9 @@
     "dependencies": {
         "admin-lte": "3.0",
         "chart.js": "^4.4.1",
+        "chartjs-plugin-datalabels": "^2.2.0",
         "feather-icons": "^4.29.1",
+        "highcharts": "^11.4.0",
         "startbootstrap-sb-admin-2": "^4.1.4"
     }
 }

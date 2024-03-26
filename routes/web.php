@@ -14,9 +14,12 @@ use App\Http\Controllers\AuthController;
 */
 
 Route::get('/', function () {
-    return view('auth.login');
+    return view('/dashboard');
 });
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
-Route::post('/welcome', [AuthController::class, 'login'])->name('login');
+Route::post('/dashboard', [AuthController::class, 'login'])->name('login');
 // Route::post('/welcome', [AuthController::class, 'show'])->name('show');
-Route::get('/employee/chart', [AuthController::class, 'chart']);
+Route::get('/api/monitoring/ticketIt', [AuthController::class, 'ticketChart']);
+Route::get('/api/monitoring/ticket-sdg', [AuthController::class, 'ticketSdgChart']);
+Route::get('/api/monitoring/ticket-legal', [AuthController::class, 'ticketLegalChart']);
+Route::get('/api/monitoring/ticket-qa', [AuthController::class, 'ticketQaChart']);
